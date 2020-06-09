@@ -3,7 +3,9 @@ body {
 	we will remove it*/
     margin: 0px;
 }
-
+marquee{
+    color: white;
+}
 
 /*background image*/
 
