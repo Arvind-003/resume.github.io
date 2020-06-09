@@ -686,6 +686,18 @@ button:focus {
         width: 0.4rem;
         height: 0.4rem;
     }
+    /* PORTFOLIO */
+    .portfolio-image-container img {
+        opacity: 0.4;
+    }
+    .portfolio-details p {
+        margin-top: 23%;
+        margin-left: 32%;
+        margin-right: 5%;
+        color: #020202;
+        padding: 20px;
+        font-weight: 600;
+    }
     /* SOCIAL ICON */
     .horizontal-list li {
         margin: 10px 6px 6px 0px;
@@ -761,6 +773,16 @@ button:focus {
         font-weight: 500;
         font-size: 0.8rem;
     }
+    /* PORTFOLIO */
+    .portfolio-details p {
+        margin-top: 15%;
+        margin-left: 32%;
+        margin-right: 5%;
+        color: #020202;
+        padding: 20px;
+        font-weight: 400;
+        font-size: 2rem;
+    }
     /* CONTACT SECTION */
     #contact h1 span {
         font-size: 30px;
@@ -791,6 +813,15 @@ button:focus {
     .my-details-info-container {
         margin-bottom: 10px;
         font-size: 0.75rem;
+    }
+}
+
+@media (max-width:490px) {
+    .portfolio-details p {
+        margin-top: 17%;
+        font-size: 1.5rem;
+        padding: 10px;
+        font-weight: 500;
     }
 }
 
@@ -827,6 +858,15 @@ button:focus {
         width: 0.4rem;
         height: 0.4rem;
     }
+    /* PORTFOLIO */
+    .portfolio-details p {
+        margin-top: 19%;
+        margin-left: 22%;
+        margin-right: 5%;
+        font-size: 1.2rem;
+        padding: 10px;
+        font-weight: 300;
+    }
     /* CONTACT */
     .mb50px {
         margin-bottom: 15px;
@@ -835,3 +875,4 @@ button:focus {
         margin-left: 12%;
     }
 }
+#ayushkumartheory
