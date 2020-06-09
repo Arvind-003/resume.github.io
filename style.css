@@ -1,0 +1,837 @@
+body {
+    /*generally body has some margine added to it so 
+	we will remove it*/
+    margin: 0px;
+}
+
+
+/*background image*/
+
+#body-header {
+    height: 65vh;
+    /*opacity: 0.9;*/
+    background-image: url(table.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*navigation list*/
+
+.horizontal-list {
+    /*to remove the bullets(dots) from the list*/
+    list-style: none;
+    /*there is some padding added by default in the list so we will
+	 remove it*/
+    padding-left: 0px;
+    margin: 0px;
+}
+
+
+/*to make all the navigation list item horizontally*/
+
+.horizontal-list li {
+    /*to make horizontal list we used inline, since also
+	wo want margin from top so we will use inline-block,
+	if we va use only inline then we cannot do margin from top*/
+    display: inline-block;
+    /*to make margin: between list*/
+    margin: 30px 20px 8px 0px;
+}
+
+
+/*color is associated with the anchor tag*/
+
+.horizontal-list li a {
+    color: white;
+    font-size: 1.5rem;
+    /*by default underline is there with anchor tag ,so 
+	we will remove it*/
+    text-decoration: none;
+}
+
+.text-center {
+    /*to center the list*/
+    text-align: center;
+}
+
+
+/*to do some transition for navigation list*/
+
+.nav-menu li a {
+    transition: color 0.5s, border-bottom 4s;
+}
+
+.nav-menu li a:hover {
+    color: red;
+    border-bottom: 1px solid white;
+}
+
+
+/*name-social container starts*/
+
+#name-social-container {
+    margin-top: 20vh;
+}
+
+
+/*styling with the name*/
+
+#my-name {
+    font-size: 3rem;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+    color: #728254;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    /*only for color transition purpuse*/
+    transition: color 1s ease-out 0.5s;
+}
+
+#my-name:hover {
+    color: #8e6464;
+}
+
+
+/*spacing between social icons and styling*/
+
+.social-icons li a i {
+    color: green;
+    padding: 10px;
+    font-size: 1.5rem;
+    /*for circular box-shadow: */
+    border-radius: 50%;
+}
+
+
+/*shadow over social icon*/
+
+.social-icons li a i:hover {
+    color: red;
+    box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.2);
+}
+
+
+/*ABOUT SECTION*/
+
+
+/*section will be parent of all the thing present
+inside section*/
+
+section {
+    width: 100%;
+    /*height: 75vh;*/
+    display: flex;
+    /*inside items have main axis is column*/
+    flex-direction: column;
+    /*to make section's child 
+	to allign in center of skills at center */
+    /*since our main axis is column so to make its content: 
+	to center (through cross axis i.e,horizontal
+		for now) we used align items*/
+    align-items: center;
+}
+
+
+/*alternate section has different background color*/
+
+
+/*every even section(2nd 4rth 6th element etc come here) has same background color*/
+
+section:nth-child(2n) {
+    background-color: #9e9b9b29;
+}
+
+
+/*every odd (1st 3rd 5th element came here)section has same background color*/
+
+section:nth-child(2n+1) {
+    background-color: white;
+}
+
+#about {
+    height: auto;
+    width: 100%;
+    /*this is optional ,to set the image with respect to about section not with body*/
+    position: relative;
+    margin-bottom: 30px;
+}
+
+
+/*editing my image in about part*/
+
+#my-image {
+    height: 12rem;
+    width: 12rem;
+    /*to bring image to center*/
+    margin: auto;
+    /*to bring image little up we used -ve margine,
+	 so tha it will little bit inside header backgroud portion*/
+    margin-top: -15vh;
+}
+
+
+/*to set my image size according to the parent(using relative property),
+ here parent is div*/
+
+#my-image img {
+    height: 100%;
+    width: 100%;
+    /*for making my image circular*/
+    border-radius: 50%;
+    /*only to color the border of image*/
+    border: 2px solid #8e8706;
+}
+
+#my-image img:hover {
+    box-shadow: 0px 0px 9px 7px #f51a09;
+    border-color: black;
+}
+
+
+/*about-para inside main*/
+
+#about-para {
+    padding: 10px;
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    color: grey;
+    line-height: 28px;
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+
+
+/*common color class*/
+
+.text-highlight {
+    color: #2857a4;
+    font-weight: 600;
+}
+
+
+/*heading of the section*/
+
+.section-heading {
+    width: auto;
+    padding: 20px 10px 10px;
+    /*margin: 10px auto;*/
+    font-weight: 400;
+}
+
+.section-heading span {
+    font-size: 40px;
+    color: #2857a4;
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: 0.5rem;
+}
+
+
+/*common margin class*/
+
+.mb75px {
+    margin-bottom: 75px;
+}
+
+
+/*SKILLS SECTION*/
+
+.skills-display {
+    width: 65%;
+    padding: 10px;
+    margin-bottom: 30px;
+    /*height: 100px;
+	border:2px solid black;*/
+    /*this element is parent of all the items present
+	inside this skills display: part,so wwe
+	defined display as flex , so that we can manupulate
+	it's child's position*/
+    display: flex;
+    /*since we want to wrap it's item according to the 
+	size of browser so we used flex wrap*/
+    flex-wrap: wrap;
+    /*i want space between skills so we used justified content*/
+    justify-content: space-evenly;
+}
+
+.skill-progress {
+    width: 14rem;
+    height: 2.2rem;
+    background-color: lightgrey;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 2px 1px #b9b9b9 inset;
+    margin: 25px;
+    overflow: hidden;
+}
+
+
+/*this > is for direct child of skill-progress*/
+
+.skill-progress>div {
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 1px 1px 5px 2px #989882;
+}
+
+.skill-name {
+    height: inherit;
+}
+
+.skill-name span {
+    color: white;
+    font-size: 1rem;
+    padding: 40px;
+    /*dout vertical align kaam nhi kr rha*/
+    vertical-align: middle;
+}
+
+
+/*WORK EXPERIENCE*/
+
+
+/*Timeline container*/
+
+.timeline {
+    position: relative;
+    width: 75%;
+    /*border:2px solid black;*/
+}
+
+
+/*timeline box*/
+
+.timeline-box {
+    /*with respect to timeline container*/
+    position: relative;
+    /*width is 40% of the width of container*/
+    width: 40%;
+    padding: 5px;
+    left: 5%;
+    min-height: 150px;
+    text-align: right;
+    /*border:2px solid black;*/
+}
+
+
+/*all even chilren of the timeline are on the right side
+of the timeline container*/
+
+.timeline-box:nth-child(2n) {
+    /*to make on the right half*/
+    left: 53%;
+}
+
+
+/*TIMRLINE_DIVIDER*/
+
+.timeline-divider {
+    position: absolute;
+    height: 75%;
+    width: 0;
+    border: 1px dashed #0096fa6b;
+    top: 10%;
+    left: 50%;
+}
+
+
+/*to make dots for every timeline box on divider dots with
+respect to box*/
+
+.timeline-box:nth-child(2n+1)::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    right: -10.5%;
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: red;
+    z-index: 1;
+}
+
+.timeline-box:nth-child(2n)::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: -8.3%;
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: red;
+    /*if the dots are over the boder its color fading
+	so in order to see it completely we give ordering
+	in z-axis*/
+    z-index: 1;
+}
+
+
+/*aroplane*/
+
+.timeline-traveller {
+    position: sticky;
+    top: 30%;
+    /*to rotate aeroplave*/
+    transform: rotate(90deg);
+    /*to make it visible over the dots*/
+    z-index: 2;
+}
+
+.timeline-container {
+    padding: 8px;
+}
+
+.timeline-logo {
+    position: absolute;
+    width: 50px;
+    overflow: hidden;
+}
+
+.timeline-logo>img {
+    width: 100%;
+}
+
+.experience-designation {
+    font-size: 1.4rem;
+}
+
+.experience-company-name {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #eb822d;
+}
+
+.experience-duration {
+    color: #9e9b9b;
+    font-weight: 100;
+    color: grey;
+    font-size: 1rem;
+}
+
+.experience-description {
+    font-size: 14px;
+    padding: 2px;
+    color: grey;
+    line-height: 20px;
+}
+
+.text-align-justify {
+    text-align: justify;
+}
+
+
+/*PORTFOLIO SECTION*/
+
+#portfolio-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.portfolio-image-container {
+    max-width: 400px;
+    overflow: hidden;
+    margin: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.portfolio-image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-details {
+    transition: all 0.6s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: transparent;
+    text-align: center;
+    font-size: 30px;
+}
+
+.portfolio-image-container:hover {
+    box-shadow: 0 0 20px #74ADC8;
+}
+
+.portfolio-image-container:hover .portfolio-details {
+    background-color: #80808078;
+    color: white;
+}
+
+
+/*CONTACT SECTION*/
+
+#contact {
+    background-color: #0abcf9;
+    background-image: linear-gradient(50deg, #2857a4 0%, #403066 74%);
+    color: white;
+    padding-bottom: 40px;
+}
+
+#contact h1,
+#contact h1 span {
+    color: white;
+}
+
+#contact-container {
+    display: flex;
+}
+
+#contact-form-container {
+    /*to take 50% of contact-container*/
+    width: 50%;
+}
+
+#contact-form {
+    margin-left: 20%;
+}
+
+#contact-form input,
+textarea {
+    max-width: 90%;
+    margin: 15px;
+    padding: 4px 10px;
+    border: 0px solid transparent;
+    border-bottom: 2px solid white;
+    color: #d9dcdd;
+    background: transparent;
+    width: 90%;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+#contact-form button[type="submit"] {
+    background: transparent;
+    font-size: 0.95rem;
+    border: 2px solid white;
+    margin-top: 5%;
+    margin-left: 35%;
+    border-radius: 2px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.046875em;
+    line-height: 1;
+    padding: 0.8em 0.8em 0.78em;
+}
+
+#contact-form button:hover {
+    background: white;
+    color: #13386fe0;
+}
+
+#my-details-container {
+    width: 35%;
+    margin-left: 6%;
+}
+
+#my-details-container h3 {
+    color: white;
+    font-weight: 550;
+    font-size: 1.2rem;
+}
+
+#my-details-container p {
+    color: #d9dcdd;
+    font-size: 0.9rem;
+}
+
+.my-details-info-container {
+    margin-bottom: 20px;
+    color: #d9dcdd;
+    font-size: 1rem;
+}
+
+.my-details-info-container span {
+    margin-left: 0.4rem;
+}
+
+.my-details-info-container i {
+    color: white;
+}
+
+#contact .social-icons li a i {
+    font-size: 1.2rem;
+    margin: 40px 10px 10px;
+    padding: 10px 14px 20px 10px;
+    color: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    /*jb bhi input m type krne jayege tb ek box 
+	bn jayega to usko hatane k liye */
+    outline: none;
+}
+
+
+/*margin class*/
+
+.m0 {
+    margin: 0;
+}
+
+.mb50px {
+    margin-bottom: 50px;
+}
+
+
+/*color*/
+
+.m-blue {
+    color: #2857a4;
+}
+
+.mb-blue {
+    background-color: #2857a4;
+}
+
+.mb-orange {
+    background-color: #ec4d1c;
+}
+
+.mb-teal {
+    background-color: #0b8176;
+}
+
+.mb-light-purple {
+    background-color: #93738c;
+}
+
+
+/*Percentage classes*/
+
+.eighty-five-percent {
+    width: 85%;
+    height: inherit;
+}
+
+.eighty-percent {
+    height: inherit;
+    width: 80%;
+}
+
+.fifty-percent {
+    height: inherit;
+    width: 50%;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (max-width:842px) {
+    .skill-progress {
+        width: 10rem;
+        height: 1.8rem;
+    }
+    .horizontal-list li a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:722px) {
+    /* HEADER */
+    .horizontal-list li a {
+        margin-left: 3px;
+    }
+    #my-name {
+        font-size: 2.8rem;
+        letter-spacing: 0.05rem;
+        font-weight: 600;
+    }
+    #my-image {
+        height: 10rem;
+        width: 10rem;
+        margin-top: -13vh;
+    }
+    /* WORK EXPERIEnCE SECTION */
+    .timeline {
+        position: relative;
+        width: 80%;
+    }
+    .timeline-box {
+        width: 70%;
+        left: 20%;
+    }
+    .timeline-box:nth-child(2n) {
+        left: 20%;
+    }
+    .timeline-divider {
+        height: 75%;
+        top: 8%;
+        left: 10%;
+    }
+    .timeline-box:nth-child(2n+1)::after {
+        right: 112.3%;
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+    .timeline-box:nth-child(2n)::after {
+        left: -14.5%;
+        top: 30%;
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+    /* SOCIAL ICON */
+    .horizontal-list li {
+        margin: 10px 6px 6px 0px;
+    }
+    /* social-icons contact */
+    #contact .social-icons li a i {
+        font-size: 1rem;
+        margin: 20px 5px 10px;
+        padding: 10px 14px 20px 10px;
+    }
+    /* CONTACT */
+    #contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #contact-form-container {
+        width: 60%;
+        margin-bottom: 20px;
+    }
+    #my-details-container {
+        width: 50%;
+        margin-left: 14%;
+    }
+    #contact-form button[type="submit"] {
+        margin-left: 25%;
+    }
+}
+
+@media (max-width:540px) {
+    /* HEADER */
+    #my-image {
+        height: 8rem;
+        width: 8rem;
+        margin-top: -11vh;
+    }
+    .section-heading span {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    /* ABOUT PARa */
+    #my-name {
+        font-size: 2.5rem;
+        letter-spacing: 0rem;
+        font-weight: 500;
+    }
+    #about-para {
+        font-size: 0.9rem;
+    }
+    /* SKILL SECTION */
+    .skill-progress {
+        width: 9rem;
+        height: 1.6rem;
+    }
+    /* WORK EXPERIENCE Section */
+    .mb75px {
+        margin-bottom: 50px;
+    }
+    .timeline-logo {
+        width: 40px;
+    }
+    .experience-designation {
+        font-size: 1.1rem;
+    }
+    .experience-description {
+        font-size: 0.75rem;
+        line-height: 15px;
+    }
+    .experience-company-name {
+        font-size: 0.95rem;
+        font-weight: 700;
+    }
+    .experience-duration {
+        font-weight: 500;
+        font-size: 0.8rem;
+    }
+    /* CONTACT SECTION */
+    #contact h1 span {
+        font-size: 30px;
+    }
+    .mb50px {
+        margin-bottom: 20px;
+    }
+    #contact-form input,
+    textarea {
+        max-width: 70%;
+        border-bottom: 1px solid white;
+        font-size: 0.8rem;
+    }
+    #contact-form button[type="submit"] {
+        margin-left: 14%;
+        font-size: 0.65rem;
+    }
+    #my-details-container h3 {
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    #my-details-container p {
+        font-size: 0.75rem;
+    }
+    .my-details-info-container span {
+        margin-left: 0.3rem;
+    }
+    .my-details-info-container {
+        margin-bottom: 10px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width:440px) {
+    /* HEADER */
+    .social-icons li a i {
+        padding: 5px;
+        font-size: 1.2rem;
+    }
+    #my-name {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    #my-image {
+        height: 7rem;
+        width: 7rem;
+        margin-top: -10vh;
+    }
+    #about-para {
+        font-size: 0.7rem;
+    }
+    /* SKILLS */
+    .skill-progress {
+        width: 8rem;
+        height: 1.4rem;
+    }
+    .skill-name span {
+        font-size: 0.8rem;
+        padding: 30px;
+    }
+    /* WORK EXPERIENCE */
+    .timeline-box:nth-child(2n+1)::after {
+        right: 111.2%;
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+    /* CONTACT */
+    .mb50px {
+        margin-bottom: 15px;
+    }
+    #contact-form {
+        margin-left: 12%;
+    }
+}
